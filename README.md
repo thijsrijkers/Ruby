@@ -1,6 +1,6 @@
 # Ruby
 <br>
-<img src="https://media.giphy.com/media/ZdNa9ISMRO5fBugxwu/200w_d.gif" style="max-width: 100%;">
+<img src="https://media.giphy.com/media/ZdNa9ISMRO5fBugxwu/200w_d.gif" style="max-width: 300%;">
 <br><br>
 Ruby is a java remake of our beloved block game 🤩
 <br>
