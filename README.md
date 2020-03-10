@@ -1,5 +1,7 @@
 # Ruby
 <br>
+<img src="https://giphy.com/gifs/ZdNa9ISMRO5fBugxwu/tile" style="max-width:480px; max-height: 270px;">
+<br><br>
 Ruby is a java remake of our beloved block game 🤩
 <br>
 =============================================================================
