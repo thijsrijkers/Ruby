@@ -21,10 +21,14 @@ After you did this you can open your libGDX project with Intellij and start the 
 =============================================================================
 <p align="center"> <b>Progress screenshot: </b></p><br><br>
 <p align="center"> <b>Landscape:</b></p><br>
+<p align="center"> 
 <img src="https://i.gyazo.com/d77bc9c4f664e4c9e3bc39f9570b1f9f.png" alt="Smiley face" height="75%" width="75%">
+ </p>
 <br>
 <p align="center"> <b>First version of Ruby: </b></p><br>
+<p align="center"> 
 <img src="https://i.gyazo.com/457fc160539a26ab45559535859dabc6.png" alt="Smiley face" height="75%" width="75%">
+ </p>
 <br>
 =============================================================================
 <h4>
