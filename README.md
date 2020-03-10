@@ -3,9 +3,6 @@
 </p>
 
 <br>
-<p align="center"> 
-<img src="https://media.giphy.com/media/ZdNa9ISMRO5fBugxwu/200w_d.gif" height="50%" width="50%">
-</p>
 <p align="center"> Ruby is a java remake of our beloved block game 🤩🦦</p>
 <br>
 =============================================================================
