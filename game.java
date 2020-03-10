@@ -3,6 +3,8 @@ package com.mygdx.game;
 import com.badlogic.gdx.ApplicationAdapter; //default
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g3d.Environment;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.GL20;
@@ -12,7 +14,10 @@ import com.mygdx.game.Block.Block;
 import com.mygdx.game.Grid_Camera.CameraControl;
 import com.mygdx.game.Grid_Camera.Grid;
 
-public class game extends ApplicationAdapter {
+import static com.badlogic.gdx.Gdx.gl;
+
+public class game extends ApplicationAdapter
+{
     public final float field_of_view = 69;
     public final float camera_degrees_per_pixel = 0.1f;
 
@@ -32,10 +37,14 @@ public class game extends ApplicationAdapter {
 
         camera_controller = new CameraControl(camera) {
             @Override
-            public boolean touchDown(int X, int Y, int pointer, int button) {
-                if (button == 0) {
+            public boolean touchDown(int X, int Y, int pointer, int button)
+            {
+                if (button == 1)
+                {
                     grid.editGrid(camera.position, camera.direction, Block.Type.DirtBlock);
-                } else if (button == 1) {
+                }
+                else if (button == 0)
+                {
                     grid.editGrid(camera.position, camera.direction, null);
                 }
                 return super.touchDown(X, Y, pointer, button);
@@ -45,7 +54,7 @@ public class game extends ApplicationAdapter {
         camera_controller.setVelocity(15);
         Gdx.input.setInputProcessor(camera_controller);
         Gdx.input.setCursorCatched(true);
-
+        gl.glClearColor(0.0f, 0.0f, 0.0f, 1f);
         Music music = Gdx.audio.newMusic(Gdx.files.internal("sound/minecraftmusic.mp3"));
         music.setLooping(true);
         music.setVolume(0.2f);
@@ -54,12 +63,22 @@ public class game extends ApplicationAdapter {
 
     public void render()
     {
+
+
         camera_controller.update();
         ModelBatch batch = new ModelBatch();
 
-        Gdx.gl.glClearColor(1.5f, 0.8f, 0.5f, 1f);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
-        Block  block = new Block(new Texture(Gdx.files.internal("blocks/grass_top.jpg")), Block.Type.DirtBlock);
+        gl.glClearColor(0.5f, 0.8f, 0.8f, 1f);
+        gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+
+        SpriteBatch batch2 = new SpriteBatch();
+        Texture[] title = new Texture[1];
+        title[0] = new Texture("gui/sky.png");
+        batch2.begin();
+        batch2.draw(title[0],0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        batch2.end();
+
+        Block  block = new Block(new Texture(Gdx.files.internal("blocks/grass_top.png")), Block.Type.DirtBlock);
         block.setPosition(0, 0, 0);
 
         batch.begin(camera);

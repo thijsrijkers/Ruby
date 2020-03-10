@@ -13,14 +13,16 @@ import com.badlogic.gdx.graphics.g3d.utils.shapebuilders.BoxShapeBuilder;
 import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.utils.Disposable;
 
-public class Block implements Disposable {
+public class Block implements Disposable
+{
     private static ModelBuilder modelBuilder = new ModelBuilder();
     private Material material;
     private Model model;
     private ModelInstance instance;
     private Type type;
 
-    public Block(Texture texture, Type type) {
+    public Block(Texture texture, Type type)
+    {
         this.type = type;
         material = new Material(TextureAttribute.createDiffuse(texture));
         modelBuilder.begin();
@@ -41,11 +43,17 @@ public class Block implements Disposable {
         return instance;
     }
 
-    public void dispose() {
+    public void dispose()
+    {
         model.dispose();
     }
 
-    public enum Type{
-        DirtBlock;
+    public enum Type
+    {
+        DirtBlock,
+        Cloud,
+        Leaves,
+        Oak,
+        GrassBlock;
     }
 }
