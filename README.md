@@ -1,5 +1,5 @@
 <p align="center"> 
-<h1>Ruby</h1>
+Ruby
 </p>
 
 <br>
