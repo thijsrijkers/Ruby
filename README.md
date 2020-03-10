@@ -1,4 +1,7 @@
-# Ruby
+<p align="center"> 
+<h1>Ruby</h1>
+</p>
+
 <br>
 <br><br>
 <p align="center"> Ruby is a java remake of our beloved block game 🤩</p>
