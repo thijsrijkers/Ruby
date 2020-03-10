@@ -1,5 +1,5 @@
 <p align="center"> 
-Ruby
+  🦥 🦦<b>Ruby</b>🦦🦥
 </p>
 
 <br>
@@ -21,7 +21,10 @@ After you installed both you can follow the instructions of libGDX and it wil be
 After you did this you can open your libGDX project with Intellij and start the game with the DesktopLauncher class you imported. <br><br>
 =============================================================================
 Progress screenshot: <br><br>
-<b>First version of Ruby </b><br>
+<b>Landscape:</b><br>
+<img src="https://i.gyazo.com/d77bc9c4f664e4c9e3bc39f9570b1f9f.png" alt="Smiley face" height="75%" width="75%">
+<br>
+<b>First version of Ruby: </b><br>
 <img src="https://i.gyazo.com/457fc160539a26ab45559535859dabc6.png" alt="Smiley face" height="75%" width="75%">
 <br>
 =============================================================================
