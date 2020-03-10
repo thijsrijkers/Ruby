@@ -17,7 +17,7 @@ First install these:<br>
 https://libgdx.badlogicgames.com/download.html  <br>
 https://developer.android.com/studio <br> <br>
 After you installed both you can follow the instructions of libGDX and it wil be done in no time. After you made your libGDX project, you can import the Ruby files in you libGDX project. It is so easy as to dump the files in: <br>
-[your_project_map]core\src <br> <br>
+[your_project_map]core\src && drop the assets folder of github in the assets folder of libGDX<br> <br>
 After you did this you can open your libGDX project with Intellij and start the game with the DesktopLauncher class you imported. <br><br>
 =============================================================================
 Progress screenshot: <br><br>
