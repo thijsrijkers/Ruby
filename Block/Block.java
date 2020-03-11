@@ -54,6 +54,7 @@ public class Block implements Disposable
         Cloud,
         Leaves,
         Oak,
+        Stone,
         GrassBlock;
     }
 }

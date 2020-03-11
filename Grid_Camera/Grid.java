@@ -28,11 +28,11 @@ public class Grid implements Disposable
 
                 if(checkGround > 0)
                 {
-                    field[i][1][k] = new Dirt();
-                    field[i][0][k] = new Dirt();
+                    field[i][15][k] = new Dirt();
+                    field[i][14][k] = new Dirt();
                     if(grassPlacement == 3)
                     {
-                        field[i][2][k] = new Grass();
+                        field[i][16][k] = new Grass();
                     }
                     checkGround -= 1;
                 }
@@ -40,20 +40,15 @@ public class Grid implements Disposable
                 {
                     if (random == 1)
                     {
-                        field[checkGround+ 4][0][checkGround] = new Dirt();
+                        field[checkGround+ 4][15][checkGround] = new Dirt();
                         checkGround = 5;
                     }
-                    field[i][0][k] = new Dirt();
-                }
-
-                if(grassPlacement == 3)
-                {
-                    field[i][random + 1][k] = new Grass();
+                    field[i][14][k] = new Dirt();
                 }
 
                 if(cloudGen == 15)
                 {
-                    field[i][17][k] = new Cloud();
+                    field[i][29][k] = new Cloud();
                 }
 
                 int treePlacement = new Random().nextInt(10);
@@ -65,9 +60,9 @@ public class Grid implements Disposable
 
                     if(intCatcher > 2 && intCatcher < intCathcherLine && intCathcherLine < gridCheck)
                     {
-
-                        int randomHeight = new Random().nextInt(3);
-                        if(randomHeight == 2)
+                        int randomGen = new Random().nextInt(3);
+                        int randomHeight = randomGen + 14;
+                        if(randomGen == 2)
                         {
                             field[i][randomHeight][k] = new Oak();
                         }
@@ -86,13 +81,17 @@ public class Grid implements Disposable
                         field[intCatcher - 1][randomHeight + 3][intCathcherLine] = new Leaves();
                         field[intCatcher + 1][randomHeight + 3][intCathcherLine] = new Leaves();
 
-                        field[i][random + 4][k] = new Leaves();
+                        field[i][randomHeight + 4][k] = new Leaves();
 
                         field[intCatcher][randomHeight + 4][intCathcherLine + 1] = new Leaves();
                         field[intCatcher][randomHeight + 4][intCathcherLine - 1] = new Leaves();
                         field[intCatcher - 1][randomHeight + 4][intCathcherLine] = new Leaves();
                         field[intCatcher + 1][randomHeight + 4][intCathcherLine] = new Leaves();
                     }
+                }
+                for (int genStone = 13; genStone > 1; genStone--)
+                {
+                    field[i][genStone][k] = new Stone();
                 }
             }
         }

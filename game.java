@@ -30,7 +30,7 @@ public class game extends ApplicationAdapter
     public void create()
     {
         camera = new PerspectiveCamera(field_of_view, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        camera.position.set(0, 10f, 10f);
+        camera.position.set(0, 80, 10);
         camera.update();
 
         grid = new Grid();
@@ -78,8 +78,8 @@ public class game extends ApplicationAdapter
         batch2.draw(title[0],0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         batch2.end();
 
-        Block  block = new Block(new Texture(Gdx.files.internal("blocks/grass_top.png")), Block.Type.DirtBlock);
-        block.setPosition(0, 0, 0);
+        Block  block = new Block(new Texture(Gdx.files.internal("blocks/Stone.png")), Block.Type.DirtBlock);
+        block.setPosition(0, 14, 0);
 
         batch.begin(camera);
         grid.render(batch, environment);
